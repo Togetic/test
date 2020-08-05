@@ -1,5 +1,5 @@
 <template>
-  <v-layout flex-column align-center justify-center>
+  <v-layout flex-column align-center justify-center style="height: 100%;">
     <h1>Congratulations!</h1>
     <p>Total: {{lastResult.value}}
       <v-icon>{{getCurrencyIcoName(lastResult.currency)}}</v-icon>
