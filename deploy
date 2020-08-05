@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+source config/config.sh
+
+docker-compose -f ${FILE} stop
+docker-compose -f ${FILE} build
+
+if [ ${ENV} == 'local' ]; then
+   docker-compose -f ${FILE} up
+else
+   docker-compose -f ${FILE} up -d
+fi

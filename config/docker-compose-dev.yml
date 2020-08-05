@@ -1,0 +1,17 @@
+version: '2'
+services:
+    drewestate_frontend-app:
+      image: drewestate_frontend-app:dev
+      container_name: drewestate_frontend-app_dev
+      restart: on-failure
+      build:
+        context: ./vuejs/dev
+        args:
+          USER_ID: "${USER_ID}"
+      volumes:
+        - ../app/:/app
+      environment:
+        - HOST=0.0.0.0
+        - BASE_URL=https://api
+      ports:
+        - '22071:3000'

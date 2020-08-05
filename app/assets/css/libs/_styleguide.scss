@@ -1,0 +1,208 @@
+
+body {
+	background: $white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	// common styles
+}
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
+}
+
+p {
+
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+
+	&:hover {
+	}
+}
+
+ul {
+
+	li {
+		.content & {
+			padding-left: 20px;
+
+			&:before {
+				content: "";
+				float: left;
+				margin: 8px 0 0 -20px;
+				border-radius: 50%;
+				width: 6px;
+				height: 6px;
+				background: $black;
+			}
+		}
+	}
+}
+
+ol {
+	counter-reset: counterName;
+
+	li {
+		&:before {
+			counter-increment: counterName;
+			content: counters(counterName, "-") ". ";
+		}
+	}
+
+	ul,
+	ol {
+		margin: 0;
+		padding-left: 20px;
+	}
+}
+
+// forms
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+	display: inline-block;
+	margin: 0;
+	border: 1px solid $black;
+	padding: 5px 20px;
+	line-height: 30px;
+	font-size: 16px;
+	height: 42px;
+	vertical-align: middle;
+	background: $white;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	@include placeholder {
+		color: $black;
+	}
+
+	&:focus {
+		border-color: $white;
+	}
+}
+
+select {
+	display: inline-block;
+	margin: 0;
+	border: 1px solid $black;
+	padding: 5px 20px;
+	line-height: 30px;
+	font-size: 16px;
+	height: 42px;
+	vertical-align: middle;
+	background: $white;
+	outline: none;
+
+	&:focus {
+		border-color: $white;
+	}
+}
+
+.button,
+input[type="submit"] {
+	display: inline-block;
+	margin: 0;
+	border: 1px solid transparent;
+	padding: 5px 20px;
+	line-height: 30px;
+	font-size: 16px;
+	height: 42px;
+	color: $black;
+	vertical-align: middle;
+	text-decoration: none;
+	white-space: nowrap;
+	background: gray;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+
+label {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+
+blockquote {
+	margin: 0;
+	font-style: normal;
+	padding: 0;
+
+	p {
+		margin: 0;
+	}
+
+	q {
+		quotes: none;
+
+		&:before,
+		&:after {
+			quotes: none;
+		}
+	}
+
+	cite {
+		display: block;
+	}
+}
+
+table {
+	margin: 0;
+
+	th,
+	td {
+		border: 1px solid $black;
+		padding: 5px;
+	}
+}
+
+[class^="col"] {
+
+}

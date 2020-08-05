@@ -1,0 +1,14 @@
+
+//@import "libs/variables";
+//@import "libs/normalize";
+//@import "libs/mixins";
+//@import "libs/fonts";
+//@import "libs/include-media";
+//@import "libs/styleguide";
+
+.v-alert{
+  z-index: 202 !important;
+  position: fixed !important;
+  bottom: 5px !important;
+  right: 10px !important;
+}

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+while getopts r:e: option
+do
+ case "${option}"
+ in
+ r) ROOT=${OPTARG};;
+ e) ENV=${OPTARG};;
+ esac
+done
+
+source config/config.sh;
+
+if [ -z ${ROOT} ]; then
+     USER=' --user '${USER_ID}
+else
+    USER=''
+fi
+
+docker-compose -f ${FILE} exec ${USER} drewestate_frontend-app sh

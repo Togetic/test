@@ -1,0 +1,42 @@
+// variables
+
+// colors
+$white: #fff;
+$black: #000;
+$dark-gray: #262626;
+$gray: #727171;
+$light-gray: #999999;
+$gold: #C8A564;
+$wine: #852024;
+$error: #D6001A;
+
+
+$main-ff: "Open Sans", sans-serif;
+
+// grid settings
+$gl-colCount: 24;
+$gl-gridName: grid;
+$gl-colName: col;
+$gl-attributeName: class;
+$gl-gutter: 30px; // Total left + right
+$gl-gutter-vertical: 0;
+$gl-mq-width: 'min-width';
+$gl-mq-list: (
+        xs: 320px,
+        sm: 768px,
+        md: 1200px,
+        lg: 1800px
+);
+
+// media settings
+$breakpoints: (
+        mobile-landscape: 568px,
+        tablet: 768px,
+        tablet-landscape: 1024px,
+        desktop: 1200px,
+        medium-desktop: 1440px,
+        large-desktop: 1800px,
+        ultra-desktop: 2400px
+);
+
+$images-path: '../images/';

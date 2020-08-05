@@ -1,0 +1,15 @@
+version: '2'
+services:
+    drewestate_frontend-server:
+      image: nginx:1.17.7-alpine
+      container_name: drewestate_frontend-server_stage
+      restart: on-failure
+      volumes:
+        - ./nginx/stage/conf.d:/etc/nginx/conf.d
+    drewestate_frontend-app:
+      image: drewestate_frontend-app:stage
+      container_name: drewestate_frontend-app_stage
+      restart: always
+      build:
+        context: ../
+        dockerfile: ./config/vuejs/stage/Dockerfile
